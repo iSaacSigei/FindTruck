@@ -1,0 +1,430 @@
+<!-- Index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      href="https://fonts.googleapis.com/css?family=Quicksand:400,600,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="fonts/icomoon/style.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.min.css" />
+
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="./styles/testimonials.css" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>FindTruck</title>
+  </head>
+
+  <body>
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    <!-- .site-mobile-menu -->
+
+    <!-- NAVBAR -->
+    <section>
+      <header class="site-navbar mt-3">
+        <div class="container-fluid">
+          <div class="row align-items-center">
+            <div class="site-logo col-6">
+              <a href="index.html">FindTruck</a>
+            </div>
+
+            <nav class="mx-auto site-navigation">
+              <ul class="site-menu js-clone-nav d-none d-xl-block ml-0 pl-0">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="./pages/about-us.html">About</a></li>
+                <li class="has-children">
+                  <a href="driver-listings.html">Available Drivers <span><i class="fa-solid fa-caret-down"></i></span></a>
+                  <ul class="dropdown">
+                    <li><a href="./main.html">All Drivers</a></li>
+                    <li><a href="single-truck.html">Single Truck</a></li>
+                    <li>
+                      <a href="special-truck.html">Special Purpose Truck</a>
+                    </li>
+                  </ul>
+                </li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="d-lg-none">
+                  <a href="./pages/post-job.html"
+                    ><span class="mr-2"><i class="fa-solid fa-lock"></i></span> Post a Job</a
+                  >
+                </li>
+                <li class="d-lg-none">
+                  <span class="icon-lock"></span><a href="login.html">Log In</a>
+                </li>
+              </ul>
+            </nav>
+
+            <div
+              class="right-cta-menu text-right d-flex aligin-items-center col-6"
+            >
+              <div class="ml-auto">
+                <a
+                  href="./pages/post-job.html"
+                  class="btn btn-outline-white border-width-2 d-none d-lg-inline-block"
+                >
+                  <span><i class="fa-solid fa-plus mr-2"></i></span>Post a Job</a
+                >
+                <a
+                  href="./pages/login.html"
+                  class="btn btn-primary border-width-2 d-none d-lg-inline-block"
+                >
+                  <span><i class="fa-solid fa-lock mr-2"></i></span>Log In</a
+                >
+              </div>
+              <a
+                href="#"
+                class="site-menu-toggle js-menu-toggle d-inline-block d-xl-none mt-lg-2 ml-3"
+              >
+                <span class="icon-menu h3 m-0 p-0 mt-2"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+    </section>
+    <section>
+      <!-- Inside the <main> section -->
+      <main>
+        <div
+          class="main-body"
+          style="background-image: url('images/truck.jpg')"
+        >
+          <!-- Form to search for a driver -->
+          <div class="search-form-container">
+            <div class="custom-p mx-4">
+              <div class="row justify-content-end">
+                <div class="col-md-4 col-lg-4">
+                  <div class="search-form bg-white p-4">
+                    <h4 class="mb-4 text-center">Search for a Driver</h4>
+                    <form id="searchForm">
+                      <!-- Pickup Location -->
+                      <input type="hidden" name="formType" value="indexForm">
+                      <div class="mb-3">
+                        <label for="pickupLocation" class="form-label"
+                          >Pickup Location</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="pickupLocation"
+                          placeholder="Enter Pickup Location"
+                        />
+                        <div
+                          class="error-message"
+                          id="pickupLocationError"
+                        ></div>
+                      </div>
+
+                      <!-- Destination -->
+                      <div class="mb-3">
+                        <label for="destination" class="form-label"
+                          >Destination</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="destination"
+                          placeholder="Enter Destination"
+                        />
+                        <div class="error-message" id="destinationError"></div>
+                      </div>
+
+                      <!-- Freight Weight -->
+                      <div class="mb-3">
+                        <label for="freightWeight" class="form-label"
+                          >Freight Weight</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="freightWeight"
+                          placeholder="Enter Freight Weight"
+                        />
+                        <div
+                          class="error-message"
+                          id="freightWeightError"
+                        ></div>
+                      </div>
+
+                      <!-- Freight Type -->
+                      <div class="mb-3">
+                        <label for="freightType" class="form-label"
+                          >Freight Type</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="freightType"
+                          placeholder="Enter Freight Type"
+                        />
+                        <div class="error-message" id="freightTypeError"></div>
+                      </div>
+
+                      <!-- Delivery Date -->
+                      <div class="mb-3">
+                        <label for="deliveryDate" class="form-label"
+                          >Delivery Date</label
+                        >
+                        <input
+                          type="date"
+                          class="form-control"
+                          id="deliveryDate"
+                          placeholder="Enter Delivery Date"
+                        />
+                        <div class="error-message" id="deliveryDateError"></div>
+                      </div>
+
+                      <!-- Delivery Time -->
+                      <div class="mb-3">
+                        <label for="deliveryTime" class="form-label"
+                          >Delivery Time</label
+                        >
+                        <input
+                          type="time"
+                          class="form-control"
+                          id="deliveryTime"
+                          placeholder="Enter Delivery Time"
+                        />
+                        <div class="error-message" id="deliveryTimeError"></div>
+                      </div>
+
+                      <button type="submit" class="btn btn-primary btn-block">
+                        Search
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </section>
+      <!-- Service -->
+<section class="bg-dark py-5 py-xl-8">
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col-12 col-md-10 col-lg-8 col-xl-7">
+        <h3 class="fs-6 mb-2 text-white text-center text-uppercase">Our Services</h3>
+        <h2 class="display-5 text-white mb-5 text-center">Empowering Your Journey with Our Truck-Finding Solutions</h2>
+        <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle" style="border-color: #89ba16;">      
+      </div>
+    </div>
+  </div>
+
+  <div class="container overflow-hidden">
+    <div class="row gy-4 gy-xl-0">
+      <!-- Service 1: Truck Search -->
+      <div class="col-12 col-sm-6 col-xl-3">
+        <div class="card border-0 border-bottom border-primary shadow-sm">
+          <div class="card-body text-center p-4 p-xxl-5">
+            <img src="./images/loupe-search-svgrepo-com.png" alt="search-svg" style="width: 60px; height: 60px;">
+            <h4 class="mb-4">Truck Search</h4>
+            <p class="mb-4 text-secondary">Effortlessly find the perfect truck for your needs. Our powerful search engine ensures you discover the right fit for your journey.</p>
+            <a href="#!" class="fw-bold text-decoration-none link-primary">
+              Learn More
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 2: Route Optimization -->
+      <div class="col-12 col-sm-6 col-xl-3">
+        <div class="card border-0 border-bottom border-primary shadow-sm">
+          <div class="card-body text-center p-4 p-xxl-5">
+            <img src="./images/route-svgrepo-com.png" alt="search-svg" style="width: 60px; height: 60px;">
+
+            <h4 class="mb-4">Route Optimization</h4>
+            <p class="mb-4 text-secondary">Save time with our route optimization service. Plan the most optimized routes for your trucking journey.</p>
+            <a href="#!" class="fw-bold text-decoration-none link-primary">
+              Learn More
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 3: Real-Time Tracking -->
+      <div class="col-12 col-sm-6 col-xl-3">
+        <div class="card border-0 border-bottom border-primary shadow-sm">
+          <div class="card-body text-center p-4 p-xxl-5">
+            <img src="./images/clock-svgrepo-com.png" alt="search-svg" style="width: 60px; height: 60px;">
+            <h4 class="mb-4">Real-Time Tracking</h4>
+            <p class="mb-4 text-secondary">with real-time tracking of your trucks. You can monitor truck location the entire journey.</p>
+            <a href="#!" class="fw-bold text-decoration-none link-primary">
+              Learn More
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+            <!-- Service 4: Freight Tracking -->
+            <div class="col-12 col-sm-6 col-xl-3">
+              <div class="card border-0 border-bottom border-primary shadow-sm">
+                <div class="card-body text-center p-4 p-xxl-5">
+                  <img src="./images/tank-truck-svgrepo-com.png " alt="search-svg" style="width: 60px; height: 60px;">
+                  <h4 class="mb-4">Freight Tracking</h4>
+                  <p class="mb-4 text-secondary">Track your freight in real-time with FindTruck's advanced tracking system, ensuring transparency and reliability.</p>
+                  <a href="#!" class="fw-bold text-decoration-none link-primary">
+                    Learn More
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+    </div>
+  </div>
+    </section>
+<!-- Testimonials section -->
+<section>
+  <div class="bg-dark py-5">
+      <div class="container">
+          <div class="row testimonial-slider">
+              <!-- Testimonial 1 -->
+              <div class="testimonial col-md-4">
+                  <div class="testimonial-content">
+                      <div class="testimonial-icon">
+                          <i class="fa fa-quote-left" aria-hidden="true"></i>
+                      </div>
+                      <p class="description">
+                          FindTruck made it easy for our logistics team to find reliable drivers for our shipments. The platform is user-friendly, and we appreciate the efficiency it brings to our operations.
+                      </p>
+                  </div>
+                  <h3 class="title mt-2">Logistics Manager</h3>
+                  <span class="post">ABC Logistics</span>
+              </div>
+
+              <!-- Testimonial 2 -->
+              <div class="testimonial col-md-4">
+                  <div class="testimonial-content">
+                      <div class="testimonial-icon">
+                          <i class="fa fa-quote-left" aria-hidden="true"></i>
+                      </div>
+                      <p class="description">
+                          As a truck driver, I've had a great experience with FindTruck. The platform connects me with relevant job opportunities, and the support team is always responsive to my needs.
+                      </p>
+                  </div>
+                  <h3 class="title mt-2">John Doe</h3>
+                  <span class="post">Professional Truck Driver</span>
+              </div>
+
+              <!-- Testimonial 3 -->
+              <div class="testimonial col-md-4">
+                  <div class="testimonial-content">
+                      <div class="testimonial-icon">
+                          <i class="fa fa-quote-left" aria-hidden="true"></i>
+                      </div>
+                      <p class="description">
+                          FindTruck has transformed how we manage our freight. The range of available drivers and the simplicity of the platform make it an invaluable tool for our business.
+                      </p>
+                  </div>
+                  <h3 class="title mt-2">Supply Chain Manager</h3>
+                  <span class="post">XYZ Shipping</span>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<!-- Footer Section -->
+<section>
+  <footer class="bg-dark text-white">
+    <div class="container py-5  border-top border-secondary">
+      <div class="row">
+        <!-- First Div -->
+        <div class="col-md-3">
+          <h5>Company</h5>
+          <ul class="list-unstyled">
+            <li><a class="text-white" href="#">FindTruck</a></li>
+            <li><a class="text-white" href="#">Home</a></li>
+            <li><a class="text-white" href="#">Our Services</a></li>
+            <li><a class="text-white" href="#">About Us</a></li>
+            <li><a class="text-white" href="#">Become a Driver</a></li>
+          </ul>
+        </div>
+
+        <!-- Second Div -->
+        <div class="col-md-3">
+          <h5>Contact Us</h5>
+          <p class="text-white">Have a question? Reach out!</p>
+          <form>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="Enter your email"
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+
+        <!-- Third Div -->
+        <div class="col-md-3">
+          <h5>Follow Us</h5>
+          <ul class="list-unstyled">
+            <li><a class="text-white" href="#">Instagram</a></li>
+            <li><a class="text-white" href="#">Facebook</a></li>
+            <li><a class="text-white" href="#">Twitter</a></li>
+            <li><a class="text-white" href="#">WeChat</a></li>
+          </ul>
+        </div>
+
+        <!-- Fourth Div -->
+        <div class="col-md-3">
+          <h5>Our Headquarters</h5>
+          <h6>Main Street, deakin</h6>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright and Last Update -->
+    <div class="container text-center border-top border-secondary py-3">
+      <p class="text-white">&copy; 2023 FindTruck. All rights reserved. Last update: January 15, 2023</p>
+      <p class="text-white">Contact: <a href="mailto:support@findtruck.as.com">support@findtruck.as.com</a></p>
+    </div>
+  </footer>
+</section>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/main.js"></script>
+    <script src="./main.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+  </body>
+</html>

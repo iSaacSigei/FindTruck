@@ -1,0 +1,173 @@
+<!-- Login html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../fonts/icomoon/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css" integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">
+    <style>
+      label{
+        color: hsl(171, 38%, 66%) 
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="background-radial-gradient overflow-hidden">
+      <div class="container px-4 py-3 px-md-5 text-center text-lg-start my-5">
+        <div class="row gx-lg-5 align-items-center mb-5">
+          <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
+            <h1
+              class="my-5 display-5 fw-bold ls-tight"
+              style="color: hsl(218, 81%, 95%)"
+            >
+              The best <br />
+              <span style="color: hsl(171, 38%, 66%)"
+                >for your trucking business</span
+              >
+            </h1>
+            <p class="mb-4 opacity-70" style="color: hsl(218, 81%, 85%)">
+              Experience the ease of trucking with FindTruck. Our platform
+              simplifies your transportation needs, making it efficient and
+              straightforward. We are dedicated to providing a hassle-free
+              experience, ensuring your journey is smooth from start to finish.
+            </p>
+          </div>
+
+          <div class="col-lg-5 mb-5 mb-lg-0 position-relative">
+            <div
+              id="radius-shape-1"
+              class="position-absolute rounded-circle shadow-5-strong"
+            ></div>
+            <div
+              id="radius-shape-2"
+              class="position-absolute shadow-5-strong"
+            ></div>
+
+            <div class="card bg-glass">
+              <div class="card-body px-2 py-2 px-md-5 mb-5">
+                <form id="loginForm">
+                  <div class="form-header">
+                    <p style="color: hsl(171, 38%, 66%)">Please login to your account</p>
+                  </div>
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="formEmail">Username</label>
+                    <input
+                      type="text"
+                      id="username"
+                      class="form-control"
+                      placeholder="Phone number or email address"
+                    />
+                    <div class="error-message text-left" id="usernameError"></div>
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="formPassword"
+                      >Password</label
+                    >
+                    <input
+                      type="password"
+                      id="password"
+                      class="form-control"
+                      placeholder="Enter password"
+                    />
+                    <div class="error-message text-left" id="passwordError"></div>
+                  </div>
+
+                  <div class="text-center pt-1 mb-5 pb-1">
+                    <button
+                      id="btn"
+                      class="btn btn-primary btn-block mb-3"
+                      type="button"
+                      onclick="validateForm()"
+                    >
+                      Log in
+                    </button>
+                    <a class="text-muted" href="#!">Forgot password?</a>
+                  </div>
+
+                  <div
+                    class="d-flex align-items-center justify-content-center pb-4"
+                  >
+                    <p class="mb-0 mx-2">Don't have an account?</p>
+                    <a href="../pages/signup.html">
+                      <button type="button" class="btn btn-outline-success text-white">
+                        Sign Up
+                      </button>
+                    </a>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer Section -->
+<section>
+  <footer class="bg-dark text-white">
+    <div class="container py-5">
+      <div class="row">
+        <!-- First Div -->
+        <div class="col-md-3">
+          <h5>Company</h5>
+          <ul class="list-unstyled">
+            <li><a class="text-white" href="#">FindTruck</a></li>
+            <li><a class="text-white" href="#">Home</a></li>
+            <li><a class="text-white" href="#">Our Services</a></li>
+            <li><a class="text-white" href="#">About Us</a></li>
+            <li><a class="text-white" href="#">Become a Driver</a></li>
+          </ul>
+        </div>
+
+        <!-- Second Div -->
+        <div class="col-md-3">
+          <h5>Contact Us</h5>
+          <p class="text-white">Have a question? Reach out!</p>
+          <form>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="Enter your email"
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+
+        <!-- Third Div -->
+        <div class="col-md-3">
+          <h5>Follow Us</h5>
+          <ul class="list-unstyled">
+            <li><a class="text-white" href="#">Instagram</a></li>
+            <li><a class="text-white" href="#">Facebook</a></li>
+            <li><a class="text-white" href="#">Twitter</a></li>
+            <li><a class="text-white" href="#">WeChat</a></li>
+          </ul>
+        </div>
+
+        <!-- Fourth Div -->
+        <div class="col-md-3">
+          <h5>Our Headquarters</h5>
+          <h6>Main Street, deakin</h6>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright and Last Update -->
+    <div class="container text-center border-top border-secondary py-3">
+      <p class="text-white">&copy; 2023 FindTruck. All rights reserved. Last update: January 15, 2023</p>
+      <p class="text-white">Contact: <a href="mailto:support@findtruck.as.com">support@findtruck.as.com</a></p>
+    </div>
+  </footer>
+</section>
+    <script src="../js/login.js"></script>
+  </body>
+</html>
