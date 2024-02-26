@@ -1,15 +1,13 @@
 {
   "name": "project-one-findtruck-website",
   "version": "1.0.0",
-  "description": "A website where customer search for the truck drivers, based on their requirements",
+  "description": "A website where customers search for truck drivers based on their requirements",
   "main": "expressServer.js",
   "scripts": {
     "test": "npm test",
-    "start": "node server.js"
+    "start": "node createDB.js && node server.js"
   },
-  "keywords": [
-    "FindTruck"
-  ],
+  "keywords": ["FindTruck"],
   "author": "Timothy Kibet",
   "license": "MIT",
   "dependencies": {

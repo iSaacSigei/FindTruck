@@ -5,19 +5,55 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../fonts/icomoon/style.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css" integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css"
+      integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
     <style>
-      label{
-        color: hsl(171, 38%, 66%) 
+      label {
+        color: hsl(171, 38%, 66%);
       }
     </style>
   </head>
 
   <body>
     <section class="background-radial-gradient overflow-hidden">
+      <!-- toast container -->
+      <div
+        id="loginToast"
+        class="toast align-items-center d-flex justify-content-center text-white position-fixed top-2 start-50 translate-middle-x"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+        style="z-index: 1000"
+      >
+        <div class="d-flex">
+          <div class="toast-body">
+            <!-- Toast message will be dynamically inserted here -->
+          </div>
+          <button
+            type="button"
+            class="btn-close btn-close-white me-2 m-auto"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
+        </div>
+      </div>
+
       <div class="container px-4 py-3 px-md-5 text-center text-lg-start my-5">
         <div class="row gx-lg-5 align-items-center mb-5">
           <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
@@ -50,9 +86,11 @@
 
             <div class="card bg-glass">
               <div class="card-body px-2 py-2 px-md-5 mb-5">
-                <form id="loginForm">
+                <form id="loginForm" accept="/login">
                   <div class="form-header">
-                    <p style="color: hsl(171, 38%, 66%)">Please login to your account</p>
+                    <p style="color: hsl(171, 38%, 66%)">
+                      Please login to your account
+                    </p>
                   </div>
                   <div class="form-outline mb-4">
                     <label class="form-label" for="formEmail">Username</label>
@@ -62,7 +100,10 @@
                       class="form-control"
                       placeholder="Phone number or email address"
                     />
-                    <div class="error-message text-left" id="usernameError"></div>
+                    <div
+                      class="error-message text-left"
+                      id="usernameError"
+                    ></div>
                   </div>
 
                   <div class="form-outline mb-4">
@@ -75,7 +116,10 @@
                       class="form-control"
                       placeholder="Enter password"
                     />
-                    <div class="error-message text-left" id="passwordError"></div>
+                    <div
+                      class="error-message text-left"
+                      id="passwordError"
+                    ></div>
                   </div>
 
                   <div class="text-center pt-1 mb-5 pb-1">
@@ -95,7 +139,10 @@
                   >
                     <p class="mb-0 mx-2">Don't have an account?</p>
                     <a href="../pages/signup.html">
-                      <button type="button" class="btn btn-outline-success text-white">
+                      <button
+                        type="button"
+                        class="btn btn-outline-success text-white"
+                      >
                         Sign Up
                       </button>
                     </a>
@@ -108,66 +155,82 @@
       </div>
     </section>
     <!-- Footer Section -->
-<section>
-  <footer class="bg-dark text-white">
-    <div class="container py-5">
-      <div class="row">
-        <!-- First Div -->
-        <div class="col-md-3">
-          <h5>Company</h5>
-          <ul class="list-unstyled">
-            <li><a class="text-white" href="#">FindTruck</a></li>
-            <li><a class="text-white" href="#">Home</a></li>
-            <li><a class="text-white" href="#">Our Services</a></li>
-            <li><a class="text-white" href="#">About Us</a></li>
-            <li><a class="text-white" href="#">Become a Driver</a></li>
-          </ul>
-        </div>
-
-        <!-- Second Div -->
-        <div class="col-md-3">
-          <h5>Contact Us</h5>
-          <p class="text-white">Have a question? Reach out!</p>
-          <form>
-            <div class="mb-3">
-              <label for="email" class="form-label">Email address</label>
-              <input
-                type="email"
-                class="form-control"
-                id="email"
-                placeholder="Enter your email"
-              />
+    <section>
+      <footer class="bg-dark text-white">
+        <div class="container py-5">
+          <div class="row">
+            <!-- First Div -->
+            <div class="col-md-3">
+              <h5>Company</h5>
+              <ul class="list-unstyled">
+                <li><a class="text-white" href="#">FindTruck</a></li>
+                <li><a class="text-white" href="#">Home</a></li>
+                <li><a class="text-white" href="#">Our Services</a></li>
+                <li><a class="text-white" href="#">About Us</a></li>
+                <li><a class="text-white" href="#">Become a Driver</a></li>
+              </ul>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
+
+            <!-- Second Div -->
+            <div class="col-md-3">
+              <h5>Contact Us</h5>
+              <p class="text-white">Have a question? Reach out!</p>
+              <form>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email address</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="Enter your email"
+                  />
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+
+            <!-- Third Div -->
+            <div class="col-md-3">
+              <h5>Follow Us</h5>
+              <ul class="list-unstyled">
+                <li><a class="text-white" href="#">Instagram</a></li>
+                <li><a class="text-white" href="#">Facebook</a></li>
+                <li><a class="text-white" href="#">Twitter</a></li>
+                <li><a class="text-white" href="#">WeChat</a></li>
+              </ul>
+            </div>
+
+            <!-- Fourth Div -->
+            <div class="col-md-3">
+              <h5>Our Headquarters</h5>
+              <h6>Main Street, deakin</h6>
+            </div>
+          </div>
         </div>
 
-        <!-- Third Div -->
-        <div class="col-md-3">
-          <h5>Follow Us</h5>
-          <ul class="list-unstyled">
-            <li><a class="text-white" href="#">Instagram</a></li>
-            <li><a class="text-white" href="#">Facebook</a></li>
-            <li><a class="text-white" href="#">Twitter</a></li>
-            <li><a class="text-white" href="#">WeChat</a></li>
-          </ul>
+        <!-- Copyright and Last Update -->
+        <div class="container text-center border-top border-secondary py-3">
+          <p class="text-white">
+            &copy; 2023 FindTruck. All rights reserved. Last update: January 15,
+            2023
+          </p>
+          <p class="text-white">
+            Contact:
+            <a href="mailto:support@findtruck.as.com"
+              >support@findtruck.as.com</a
+            >
+          </p>
         </div>
-
-        <!-- Fourth Div -->
-        <div class="col-md-3">
-          <h5>Our Headquarters</h5>
-          <h6>Main Street, deakin</h6>
-        </div>
-      </div>
-    </div>
-
-    <!-- Copyright and Last Update -->
-    <div class="container text-center border-top border-secondary py-3">
-      <p class="text-white">&copy; 2023 FindTruck. All rights reserved. Last update: January 15, 2023</p>
-      <p class="text-white">Contact: <a href="mailto:support@findtruck.as.com">support@findtruck.as.com</a></p>
-    </div>
-  </footer>
-</section>
+      </footer>
+    </section>
     <script src="../js/login.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

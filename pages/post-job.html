@@ -58,7 +58,7 @@
                 <li class="has-children">
                   <a href="../main.html"
                     >Available Drivers
-                    <span><i class="fa-solid fa-caret-down"></i></span
+                    <span></ispan
                   ></a>
                   <ul class="dropdown">
                     <li><a href="../main.html">All Drivers</a></li>
@@ -120,175 +120,136 @@
           style="background-image: url('../images/truck.jpg')"
         >
           <!-- Form to post a job -->
-          <div class="search-form-container">
+          <div class="post-job-form-container pb-4">
             <div class="custom-p mx-4">
-              <div class="row justify-content-end mr-3">
-                <!-- Job Post Form -->
-                <section class="bg-light py-3 py-xl-4 rounded">
-                  <div class="container">
-                    <div class="row justify-content-md-center">
-                      <div class="col-12 col-md-10 col-lg-8 col-xl-7">
-                        <h3
-                          class="fs-6 mb-2 text-secondary text-center text-uppercase"
-                        >
-                          Post a Job
-                        </h3>
-                        <h3 class="display-6 mb-2 text-center">
-                          Post your requirements to find a suitable driver.
-                        </h3>
-                        <hr
-                          class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle"style="border-color: #89ba16;"
+              <div class="row justify-content-end">
+                <div class="col-md-4 col-lg-4">
+                  <div class="post-job-form bg-white p-4 rounded">
+                    <h4 class="mb-4 text-center">Post a Job</h4>
+                    <form id="postJobForm" onsubmit="return validatePostJobForm()" action="/submit-form" >
+                      <!-- Customer Name -->
+                      <div class="mb-3">
+                        <label for="customerName" class="form-label">Your Name</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="customerName"
+                          placeholder="Enter Your Name"
+                        />
+                        <div class="error-message" id="customerNameError"></div>
+                      </div>
+        
+                      <!-- Phone Number -->
+                      <div class="mb-3">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <input
+                          type="tel"
+                          class="form-control"
+                          id="phone"
+                          placeholder="Enter Phone Number"
+                        />
+                        <div class="error-message" id="phoneError"></div>
+                      </div>
+        
+                      <!-- Email -->
+                      <div class="mb-3">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="email"
+                          placeholder="Enter Email Address"
+                        />
+                        <div class="error-message" id="emailError"></div>
+                      </div>
+        
+                      <!-- Freight Type -->
+                      <div class="mb-3">
+                        <label for="freightType" class="form-label">Freight Type</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="freightType"
+                          placeholder="Enter Freight Type"
+                        />
+                        <div class="error-message" id="freightTypeError"></div>
+                      </div>
+        
+                      <!-- Freight Weight -->
+                      <div class="mb-3">
+                        <label for="freightWeight" class="form-label">Freight Weight</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="freightWeight"
+                          placeholder="Enter Freight Weight"
+                        />
+                        <div class="error-message" id="freightWeightError"></div>
+                      </div>
+        
+                      <!-- Destination -->
+                      <div class="mb-3">
+                        <label for="destination" class="form-label">Destination</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="destination"
+                          placeholder="Enter Destination"
+                        />
+                        <div class="error-message" id="destinationError"></div>
+                      </div>
+        
+                      <!-- Cargo Location -->
+                      <div class="mb-3">
+                        <label for="cargoLocation" class="form-label">Cargo Location</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="cargoLocation"
+                          placeholder="Enter Cargo Location"
+                        />
+                        <div class="error-message" id="cargoLocationError"></div>
+                      </div>
+        
+                      <!-- Job Description -->
+                      <div class="mb-3">
+                        <label for="jobDescription" class="form-label">Job Description</label>
+                        <textarea
+                          class="form-control"
+                          id="jobDescription"
+                          rows="3"
+                          placeholder="Enter Job Description"
+                        ></textarea>
+                        <div class="error-message" id="jobDescriptionError"></div>
+                      </div>
+        
+                      <!-- Special Case -->
+                      <div class="mb-3">
+                        <label for="specialCase" class="form-label">Any Special Case</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="specialCase"
+                          placeholder="Enter Special Case"
                         />
                       </div>
-                    </div>
-
-                    <div class="row justify-content-center">
-                      <div class="col-12 col-md-10">
-                        <form action="process_job_post.php" method="post">
-                          <!-- Customer Name Input -->
-                          <div class="mb-3">
-                            <label for="customerName" class="form-label"
-                              >Customer Name</label
-                            >
-                            <input
-                              type="text"
-                              class="form-control"
-                              id="customerName"
-                              name="customerName"
-                              required
-                            />
-                          </div>
-
-                          <!-- Phone Number Input -->
-                          <div class="mb-3">
-                            <label for="phone" class="form-label"
-                              >Your Phone Number</label
-                            >
-                            <input
-                              type="tel"
-                              class="form-control"
-                              id="phone"
-                              name="phone"
-                              required
-                            />
-                          </div>
-
-                          <!-- Email Input -->
-                          <div class="mb-3">
-                            <label for="email" class="form-label"
-                              >Your Email</label
-                            >
-                            <input
-                              type="email"
-                              class="form-control"
-                              id="email"
-                              name="email"
-                              required
-                            />
-                          </div>
-
-                          <!-- Freight Type Input -->
-                          <div class="mb-3">
-                            <label for="freightType" class="form-label"
-                              >Freight Type</label
-                            >
-                            <input
-                              type="text"
-                              class="form-control"
-                              id="freightType"
-                              name="freightType"
-                              required
-                            />
-                          </div>
-
-                          <!-- Freight Weight Input -->
-                          <div class="mb-3">
-                            <label for="freightWeight" class="form-label"
-                              >Freight Weight</label
-                            >
-                            <input
-                              type="text"
-                              class="form-control"
-                              id="freightWeight"
-                              name="freightWeight"
-                              required
-                            />
-                          </div>
-
-                          <!-- Destination Input -->
-                          <div class="mb-3">
-                            <label for="destination" class="form-label"
-                              >Destination</label
-                            >
-                            <input
-                              type="text"
-                              class="form-control"
-                              id="destination"
-                              name="destination"
-                              required
-                            />
-                          </div>
-
-                          <!-- Cargo Location Input -->
-                          <div class="mb-3">
-                            <label for="cargoLocation" class="form-label"
-                              >Cargo Location</label
-                            >
-                            <input
-                              type="text"
-                              class="form-control"
-                              id="cargoLocation"
-                              name="cargoLocation"
-                              required
-                            />
-                          </div>
-
-                          <!-- Brief Description Textarea -->
-                          <div class="mb-3">
-                            <label for="jobDescription" class="form-label"
-                              >Brief Description about Cargo</label
-                            >
-                            <textarea
-                              class="form-control"
-                              id="jobDescription"
-                              name="jobDescription"
-                              rows="4"
-                              required
-                            ></textarea>
-                          </div>
-
-                          <!-- Any Special Case Input -->
-                          <div class="mb-3">
-                            <label for="specialCase" class="form-label"
-                              >Any Special Case</label
-                            >
-                            <input
-                              type="text"
-                              class="form-control"
-                              id="specialCase"
-                              name="specialCase"
-                            />
-                          </div>
-                          <!-- Estimated Cost Input -->
-                          <div class="mb-3">
-                            <label for="estimatedCost" class="form-label">Estimated Cost</label>
-                            <input
-                              type="number"
-                              step="0.01" 
-                              class="form-control"
-                              id="estimatedCost"
-                              name="estimatedCost"
-                            />
-                          </div>
-                          <button type="submit" id="submitJobButton" class="btn btn-primary">
-                            Submit Job
-                        </button>
-                        
-                        </form>
+        
+                      <!-- Estimated Cost -->
+                      <div class="mb-3">
+                        <label for="estimatedCost" class="form-label">Estimated Cost</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="estimatedCost"
+                          placeholder="Enter Estimated Cost"
+                        />
+                        <div class="error-message" id="estimatedCostError"></div>
                       </div>
-                    </div>
+        
+                      <button type="submit" class="btn btn-primary btn-block">Post Job</button>
+                    </form>
                   </div>
-                </section>
+                </div>
               </div>
             </div>
           </div>
@@ -364,38 +325,29 @@
         </div>
       </footer>
     </section>
-      <!-- Add this div at the end of your post-job.html, just before the closing body tag -->
-      <div class="modal fade" tabindex="-1" role="dialog" id="successModal">
-        <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-body text-center">
-              <div id="checkIcon">
-                <i class="text-success fa-solid fa-circle-check"></i>
-              </div>
-              <div class="mt-4 py-2">
-                <p class="px-4 pb-0 mb-1 text-secondary">Successfully Submitted</p>
-                <h4 class="h5">Your job details are</h4>
-                <!-- Display form data details here -->
-                <ul class="list-unstyled">
-                  <li><strong>Customer Name:</strong> <span id="customerNameDetails"></span></li>
-                  <li><strong>Phone:</strong> <span id="phoneDetails"></span></li>
-                  <li><strong>Email:</strong> <span id="emailDetails"></span></li>
-                  <!-- Add more fields as needed -->
-                </ul>
-              </div>
-              <div class="py-1"><button type="button" class="btn btn-sm btn-outline-success rounded-pill px-5" data-bs-dismiss="modal">OK</button></div>
-            </div>
+    <!-- Modal -->
+    <div class="modal fade" id="jobModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Job Details</h5>
           </div>
+          <div class="modal-body" id="modalContent">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="closeModal()">Close</button>
+            <button type="button" class="btn btn-primary" onclick="editData()">Save changes</button>
+          </div>          
         </div>
       </div>
-
-
+    </div>
     <script src="../js/jquery-3.3.1.min.js"></script>
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/jquery.sticky.js"></script>
     <script src="../js/main.js"></script>
-    <script src="../main.js"></script>
+    <!-- <script src="../main.js"></script> -->
+    <script src="../js/post-job.js"></script>
     <script src="../js/owl.carousel.min.js"></script>
   </body>
 </html>
